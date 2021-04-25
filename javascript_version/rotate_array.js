@@ -1,16 +1,16 @@
-var rotate = function(nums, k) {
-    const rotateArray = nums.concat();
-    for (let i = 0; i < k; i++){
-        const top_Array = rotateArray.shift();
-        rotateArray.push(top_Array);
-
+const rotateNums = (nums, start, end) => {
+    while(start < end) {
+        [nums[start], nums[end]] = [nums[end], nums[start]];
+        start ++;
+        end--;
     }
-    return rotateArray;
-};
+}
+var rotate = function(nums, k) {
 
-const k_Number = 3;
-const sample_Array = [1,2,3,4,5,6,7]
+    k = k % nums.length;
+    nums.reverse();
+    rotateNums(nums, 0, k - 1);
+    rotateNums(nums, k, nums.length -1);
+    
 
-const expected_Array = [5,6,7,1,2,3,4]
-
-console.log(rotate(sample_Array, k_Number))
+}

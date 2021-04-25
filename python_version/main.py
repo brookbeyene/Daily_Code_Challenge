@@ -17,7 +17,12 @@ def removeDuplicates(self, nums):
         return j
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+<<<<<<< HEAD
     name = input("hello? ")
     print('PyCharm' + name)
+=======
+   removeDuplicates([1,2,2,3,4,5,5,5])
+     
+>>>>>>> 412fb97617c68c723a774c67d70bdc4634de547a
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
